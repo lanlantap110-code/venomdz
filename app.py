@@ -47,7 +47,7 @@ def phone_number_info(number):
         return jsonify({'error': 'Invalid phone number format. Must be 10 digits.'}), 400
     
     try:
-        api_url = f"https://demon.taitanx.workers.dev/?mobile={number}"
+        api_url = f"https://splexxo-info.vercel.app/api/seller?mobile={number}&key=SPLEXXO"
         response = requests.get(api_url, timeout=10)
         
         if response.status_code == 200:
